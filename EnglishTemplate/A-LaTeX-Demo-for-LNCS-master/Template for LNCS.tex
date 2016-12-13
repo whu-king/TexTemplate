@@ -1,0 +1,251 @@
+% !TeX spellcheck = <none>
+% !TeX encoding = GB2312
+% This is lnicst.tex the demonstration file of the LaTeX macro package for
+% Lecture Notes of the Institute for Computer Sciences, Social-Informatics
+% and Telecommunications Engineering series from Springer-Verlag.
+% It serves as a template for authors as well.
+% version 1.0 for LaTeX2e
+%
+\documentclass[lnicst]{svmultln}
+%
+\usepackage{makeidx}  % allows for indexgeneration
+% \makeindex          % be prepared for an author index
+%
+\usepackage{amssymb}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+\graphicspath{{./graphics/}}
+
+\usepackage{url}
+
+\usepackage[pdfpagelabels,hypertexnames=false,breaklinks=true,bookmarksopen=true,bookmarksopenlevel=2]{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{color}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{color}
+
+\makeatletter
+\newif\if@restonecol
+\makeatother
+\let\algorithm\relax
+\let\endalgorithm\relax
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}%[ruled,vlined]{
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}  % Use Input in the format of Algorithm
+\renewcommand{\algorithmicensure}{\textbf{Output:}} % Use Output in the format of Algorithm
+
+
+\begin{document}
+%
+\mainmatter              % start of the contribution
+%
+\title{this is only for english LNCS}
+%
+
+\author{Jinliang Xu\inst{1} \and Jinliang Xu\inst{2}}
+%
+%\authorrunning{Ivar Ekeland et al.}   % abbreviated author list (for running head)
+%
+%%%% list of authors for the TOC (use if author list has to be modified)
+\tocauthor{Jinliang Xu, Jinliang Xu}
+%
+\institute{Beijing University of Posts and Telecommunications, China,\\
+\email{jlxu@bupt.edu.cn}
+\and
+Beijing University of Posts and Telecommunications, China,\\
+\email{jlxu@bupt.edu.cn}}
+
+\maketitle              % typeset the title of the contribution
+
+
+\begin{abstract}       
+The abstract should summarize the contents of the paper
+using at least 70 and at most 150 words. It will be set in 9-point
+font size and be inset 1.0 cm from the right and left margins.
+There will be two blank lines before and after the Abstract.
+
+\keywords {high-level Petri nets, net components}
+\end{abstract}
+%
+\section{Section Title}
+%
+%
+In this section, we will consider the case when the Hamiltonian $H(x)$
+is autonomous. For the sake of simplicity, we shall also assume that it
+is $C^{1}$.
+
+We shall first consider the question of nontriviality, within the
+general framework of
+$\left(A_{\infty},B_{\infty}\right)$-subquadratic Hamiltonians. In
+the second subsection, we shall look into the special case when $H$ is
+$\left(0,b_{\infty}\right)$-subquadratic,
+and we shall try to derive additional information.
+%
+\subsection{Subsection Title}
+%
+Theorem~\ref{ghou:pre} tells us that if $\lambda +\gamma < 0$, the
+boundary-value problem:
+\begin{equation}
+\begin{array}{rcl}
+  \dot{x}&=&JH' (x)\\
+  x(0)&=&x (T)
+\end{array}
+\end{equation}
+
+
+%
+\begin{proposition}
+Assume $H'(0)=0$ and $ H(0)=0$. Set:
+\begin{equation}
+  \delta := \liminf_{x\to 0} 2 N (x) \left\|x\right\|^{-2}\ .
+  \label{eq:one}
+\end{equation}
+
+If $\gamma < - \lambda < \delta$,
+the solution $\overline{u}$ is non-zero:
+\begin{equation}
+  \overline{x} (t) \ne 0\ \ \ \forall t\ .
+\end{equation}
+\end{proposition}
+%
+\begin{proof}
+Condition (\ref{eq:one}) means that, for every
+$\delta ' > \delta$, there is some $\varepsilon > 0$ such that
+\begin{equation}
+  \left\|x\right\| \le \varepsilon \Rightarrow N (x) \le
+  \frac{\delta '}{2} \left\|x\right\|^{2}\ .
+\end{equation}
+
+
+\begin{figure}
+\centering
+\includegraphics[height=6.2cm]{ratings_groups}
+\caption{A figure example.}
+\label{fig:example}
+\end{figure}
+
+
+
+On the other hand, we check directly that $\psi (0) = 0$. This shows
+that 0 cannot be a minimizer of $\psi$, not even a local one.
+So $\overline{u} \ne 0$ and
+$\overline{u} \ne \Lambda_{o}^{-1} (0) = 0$. \qed
+\end{proof}
+%
+\begin{corollary}
+Assume $H$ is $C^{2}$ and
+$\left(a_{\infty},b_{\infty}\right)$-subquadratic at infinity. Let
+$\xi_{1},\allowbreak\dots,\allowbreak\xi_{N}$  be the
+equilibria, that is, the solutions of $H' (\xi ) = 0$.
+\end{corollary}
+%
+
+\begin{proof}
+The condition $\gamma < -\lambda < \delta$ now becomes:
+\begin{equation}
+  b_{\infty} - a_{\infty} <
+  - \frac{2\pi}{T} k_{o} -a_{\infty} < \omega -a_{\infty}
+\end{equation}
+which is precisely condition .\qed
+\end{proof}
+%
+%
+\paragraph{Notes and Comments.}
+The results in this section are a
+refined version of \cite{smit:wat};
+the minimality result of Proposition
+14 was the first of its kind.
+
+To understand the nontriviality conditions, such as the one in formula
+(\ref{eq:four}), one may think of a one-parameter family
+$x_{T}$, $T\in \left(2\pi\omega^{-1}, 2\pi b_{\infty}^{-1}\right)$
+of periodic solutions, $x_{T} (0) = x_{T} (T)$,
+with $x_{T}$ going away to infinity when $T\to 2\pi \omega^{-1}$,
+which is the period of the linearized system at 0.
+
+\begin{table}
+\caption{This is the example table taken out of {\it The
+\TeX{}book,} p.\,246}
+\begin{center}
+\begin{tabular}{r@{\quad}rl}
+\hline
+\multicolumn{1}{l}{\rule{0pt}{12pt}
+                   Year}&\multicolumn{2}{l}{World population}\\[2pt]
+\hline\rule{0pt}{12pt}
+8000 B.C.  &     5,000,000& \\
+  50 A.D.  &   200,000,000& \\
+1650 A.D.  &   500,000,000& \\
+1945 A.D.  & 2,300,000,000& \\
+1980 A.D.  & 4,400,000,000& \\[2pt]
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+%
+\begin{theorem} [Ghoussoub-Preiss]\label{ghou:pre}
+Assume $H(t,x)$ is
+$(0,\varepsilon )$-subquadratic at
+infinity for all $\varepsilon > 0$, and $T$-periodic in $t$
+\begin{equation}
+  H (t,\cdot )\ \ \ \ \ {\rm is\ convex}\ \ \forall t
+\end{equation}
+\begin{equation}
+  H (\cdot ,x)\ \ \ \ \ {\rm is}\ \ T{\rm -periodic}\ \ \forall x
+\end{equation}
+\begin{equation}
+  H (t,x)\ge n\left(\left\|x\right\|\right)\ \ \ \ \
+  {\rm with}\ \ n (s)s^{-1}\to \infty\ \ {\rm as}\ \ s\to \infty
+\end{equation}
+\begin{equation}
+  \forall \varepsilon > 0\ ,\ \ \ \exists c\ :\
+  H(t,x) \le \frac{\varepsilon}{2}\left\|x\right\|^{2} + c\ .
+\end{equation}
+
+Assume also that $H$ is $C^{2}$, and $H'' (t,x)$ is positive definite
+everywhere. Then there is a sequence $x_{k}$, $k\in \bbbn$, of
+$kT$-periodic solutions of the system
+\begin{equation}
+  \dot{x} = JH' (t,x)
+\end{equation}
+such that, for every $k\in \bbbn$, there is some $p_{o}\in\bbbn$ with:
+\begin{equation}
+  p\ge p_{o}\Rightarrow x_{pk} \ne x_{k}\ .
+\end{equation}
+\qed
+\end{theorem}
+%
+%
+\begin{definition}
+Let $A_{\infty} (t)$ and $B_{\infty} (t)$ be symmetric
+operators in $\bbbr^{2n}$, depending continuously on
+$t\in [0,T]$, such that
+$A_{\infty} (t) \le B_{\infty} (t)$ for all $t$.
+
+Note that, if $k<0$, it is not convex.
+\end{definition}
+%
+
+The first results on subharmonics were
+obtained by Foster and Kesselman in \cite{minson2015crowdsourced,kazai2016quality}, who showed the existence of
+infinitely many subharmonics both in the subquadratic and superquadratic
+case, with suitable growth conditions on $H'$. Again the duality
+approach enabled Foster and Waterman in \cite{konevcny2010early} to treat the
+same problem in the convex-subquadratic case, with growth conditions on
+$H$ only.
+
+Recently, Smith and Waterman (see \cite{kazai2016quality} and May et al. \cite{konevcny2010early})
+have obtained lower bound on the number of subharmonics of period $kT$,
+based on symmetry considerations and on pinching estimates, as in
+Sect.~5.2 of this article \cite{kazai2016quality}.
+
+%
+% ---- Bibliography ----
+%
+\bibliographystyle{plain}
+\bibliography{reference}
+%
+\end{document}
